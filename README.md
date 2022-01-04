@@ -8,7 +8,9 @@ This code has hardly been used, and I am not experienced at making interpreters,
 
 ## Examples
 
-    let a = new PrefixPredicate('&(asdf=1)(asdf=2)');
-    let ar = a.eval({ asdf: 1 }); // false
+```js
+let a = new PrefixPredicate('&(asdf=1)(asdf=2)');
+let ar = a.eval({ asdf: 1 }); // false
+```
 
 Thanks for checking it out. Happy coding!
