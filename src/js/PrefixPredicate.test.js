@@ -1,4 +1,10 @@
 
+// forgive the code duplication here, I couldn't get eval() to 
+// make the class available when loaded from another file.
+
+// var fs = require('fs');
+// eval.apply(this, [fs.readFileSync('./src/js/PrefixPredicate.js').toString()]);
+
 class PrefixPredicate
 {
     constructor(expression)
@@ -404,8 +410,5 @@ let fr = f.eval(); // true
 
 let g = new PrefixPredicate('queryString.asdf=*');
 let gr = g.eval({ queryString: { asdf: 1 } }); // true
-
-let h = new PrefixPredicate('&(!(queryString.dba=*))(!(queryString.sse=*))');
-let hr = h.eval({ queryString: { dba: 1 } }); // false
 
 console.log('hello')
